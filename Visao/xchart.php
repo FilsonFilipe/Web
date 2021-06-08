@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Dashio - Bootstrap Admin Template</title>
+
+  <!-- Favicons -->
+  <link href="Estilo/img/favicon.png" rel="icon">
+  <link href="Estilo/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="Estilo/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="Estilo/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Estilo/lib/xchart/xcharts.css">
+  <!-- Custom styles for this template -->
+  <link href="Estilo/css/style.css" rel="stylesheet">
+  <link href="Estilo/css/style-responsive.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+     <?php include_once 'Include/header.php';?>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+     <?php include_once 'Include/menu.php';?>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <h3><i class="fa fa-angle-right"></i>  XChart</h3>
+        <!-- page start-->
+        <div class="content-panel">
+          <h4><i class="fa fa-angle-right"></i>  XChart Example</h4>
+          <div class="panel-body">
+            <figure class="demo-xchart" id="chart"></figure>
+          </div>
+        </div>
+        <!-- page end-->
+      </section>
+    </section>
+    <!-- /MAIN CONTENT -->
+    <!--main content end-->
+    <!--footer start-->
+     <?php include_once 'Include/rodape.php';?>
+    <!--footer end-->
+  </section>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="Estilo/lib/jquery/jquery.min.js"></script>
+  <script src="Estilo/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script class="include" type="text/javascript" src="Estilo/lib/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="Estilo/lib/jquery.scrollTo.min.js"></script>
+  <script src="Estilo/lib/jquery.nicescroll.js" type="text/javascript"></script>
+  <!--common script for all pages-->
+  <script src="Estilo/lib/common-scripts.js"></script>
+  <!--script for this page-->
+  <script src="Estilo/lib/xchart/d3.v3.min.js"></script>
+  <script src="Estilo/lib/xchart/xcharts.min.js"></script>
+  <script>
+    (function() {
+      var data = [{
+        "xScale": "ordinal",
+        "comp": [],
+        "main": [{
+          "className": ".main.l1",
+          "data": [{
+            "y": 15,
+            "x": "2012-11-19T00:00:00"
+          }, {
+            "y": 11,
+            "x": "2012-11-20T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-21T00:00:00"
+          }, {
+            "y": 10,
+            "x": "2012-11-22T00:00:00"
+          }, {
+            "y": 1,
+            "x": "2012-11-23T00:00:00"
+          }, {
+            "y": 6,
+            "x": "2012-11-24T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-25T00:00:00"
+          }]
+        }, {
+          "className": ".main.l2",
+          "data": [{
+            "y": 29,
+            "x": "2012-11-19T00:00:00"
+          }, {
+            "y": 33,
+            "x": "2012-11-20T00:00:00"
+          }, {
+            "y": 13,
+            "x": "2012-11-21T00:00:00"
+          }, {
+            "y": 16,
+            "x": "2012-11-22T00:00:00"
+          }, {
+            "y": 7,
+            "x": "2012-11-23T00:00:00"
+          }, {
+            "y": 18,
+            "x": "2012-11-24T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-25T00:00:00"
+          }]
+        }],
+        "type": "line-dotted",
+        "yScale": "linear"
+      }, {
+        "xScale": "ordinal",
+        "comp": [],
+        "main": [{
+          "className": ".main.l1",
+          "data": [{
+            "y": 12,
+            "x": "2012-11-19T00:00:00"
+          }, {
+            "y": 18,
+            "x": "2012-11-20T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-21T00:00:00"
+          }, {
+            "y": 7,
+            "x": "2012-11-22T00:00:00"
+          }, {
+            "y": 6,
+            "x": "2012-11-23T00:00:00"
+          }, {
+            "y": 12,
+            "x": "2012-11-24T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-25T00:00:00"
+          }]
+        }, {
+          "className": ".main.l2",
+          "data": [{
+            "y": 29,
+            "x": "2012-11-19T00:00:00"
+          }, {
+            "y": 33,
+            "x": "2012-11-20T00:00:00"
+          }, {
+            "y": 13,
+            "x": "2012-11-21T00:00:00"
+          }, {
+            "y": 16,
+            "x": "2012-11-22T00:00:00"
+          }, {
+            "y": 7,
+            "x": "2012-11-23T00:00:00"
+          }, {
+            "y": 18,
+            "x": "2012-11-24T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-25T00:00:00"
+          }]
+        }],
+        "type": "cumulative",
+        "yScale": "linear"
+      }, {
+        "xScale": "ordinal",
+        "comp": [],
+        "main": [{
+          "className": ".main.l1",
+          "data": [{
+            "y": 12,
+            "x": "2012-11-19T00:00:00"
+          }, {
+            "y": 18,
+            "x": "2012-11-20T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-21T00:00:00"
+          }, {
+            "y": 7,
+            "x": "2012-11-22T00:00:00"
+          }, {
+            "y": 6,
+            "x": "2012-11-23T00:00:00"
+          }, {
+            "y": 12,
+            "x": "2012-11-24T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-25T00:00:00"
+          }]
+        }, {
+          "className": ".main.l2",
+          "data": [{
+            "y": 29,
+            "x": "2012-11-19T00:00:00"
+          }, {
+            "y": 33,
+            "x": "2012-11-20T00:00:00"
+          }, {
+            "y": 13,
+            "x": "2012-11-21T00:00:00"
+          }, {
+            "y": 16,
+            "x": "2012-11-22T00:00:00"
+          }, {
+            "y": 7,
+            "x": "2012-11-23T00:00:00"
+          }, {
+            "y": 18,
+            "x": "2012-11-24T00:00:00"
+          }, {
+            "y": 8,
+            "x": "2012-11-25T00:00:00"
+          }]
+        }],
+        "type": "bar",
+        "yScale": "linear"
+      }];
+      var order = [0, 1, 0, 2],
+        i = 0,
+        xFormat = d3.time.format('%A'),
+        chart = new xChart('line-dotted', data[order[i]], '#chart', {
+          axisPaddingTop: 5,
+          dataFormatX: function(x) {
+            return new Date(x);
+          },
+          tickFormatX: function(x) {
+            return xFormat(x);
+          },
+          timing: 1250
+        }),
+        rotateTimer,
+        toggles = d3.selectAll('.multi button'),
+        t = 3500;
+
+      function updateChart(i) {
+        var d = data[i];
+        chart.setData(d);
+        toggles.classed('toggled', function() {
+          return (d3.select(this).attr('data-type') === d.type);
+        });
+        return d;
+      }
+
+      toggles.on('click', function(d, i) {
+        clearTimeout(rotateTimer);
+        updateChart(i);
+      });
+
+      function rotateChart() {
+        i += 1;
+        i = (i >= order.length) ? 0 : i;
+        var d = updateChart(order[i]);
+        rotateTimer = setTimeout(rotateChart, t);
+      }
+      rotateTimer = setTimeout(rotateChart, t);
+    }());
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
